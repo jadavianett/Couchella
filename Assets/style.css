@@ -1,7 +1,14 @@
 body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
   background-image: url(./images/concert-background-image.jpg);
   background-size: cover;
 }
+
+main {
+    flex: 1 0 auto;
+  }
 
 h1 {
   text-align: center;
@@ -16,7 +23,7 @@ p {
 button {
   margin: auto;
   display: flex;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 .container {
   align-items: center;
@@ -25,5 +32,5 @@ button {
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
