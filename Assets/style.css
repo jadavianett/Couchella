@@ -42,4 +42,5 @@ body {
 
 .footer-bg {
     background-color: lightgray;
+    opacity: 0.3;
 }
