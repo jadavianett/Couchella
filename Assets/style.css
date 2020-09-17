@@ -25,6 +25,10 @@ p {
   text-shadow: 2px 2px 4px #000000;
   font-weight: 600;
 }
+.bounce {
+  animation: bounce;
+  animation-duration: 1s;
+}
 
 .container {
   align-items: center;
@@ -42,13 +46,26 @@ p {
   display: flex;
   font-family: "Raleway", sans-serif;
   font-weight: bolder;
+  text-shadow: 2px 2px 2px #000000;
   background-color: rgb(18, 164, 223);
 }
 
 button.btn:hover {
   background-color: rgb(241, 176, 212);
+  text-shadow: 2px 2px 2px #000000;
 }
 
 button.btn:focus {
+  text-shadow: 2px 2px 2px #000000;
   background-color: rgb(5, 29, 87);
+}
+
+i {
+  margin-right: 10px;
+}
+
+i,
+span {
+  animation: flash;
+  animation-duration: 5s;
 }
