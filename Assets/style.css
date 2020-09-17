@@ -1,19 +1,26 @@
 body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
   background-image: url(./images/concert-background-image.jpg);
   background-size: cover;
 }
 
+main {
+    flex: 1 0 auto;
+  }
+
 h1 {
   text-align: center;
-  color:white;
+  color: white;
   animation: bounce;
   animation-duration: 1s;
   font-weight: 800;
-  text-shadow: 10px 10px 10px #000000
+  text-shadow: 10px 10px 10px #000000;
 }
 p {
   text-align: center;
-  color:white;
+  color: white;
   text-shadow: 2px 2px 4px #000000;
   font-weight: 600;
 }
@@ -21,7 +28,7 @@ p {
 button {
   margin: auto;
   display: flex;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 .container {
   align-items: center;
@@ -30,5 +37,9 @@ button {
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
+}
+
+.footer-bg {
+    background-color: lightgray;
 }
