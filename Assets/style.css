@@ -48,9 +48,13 @@ p {
   font-weight: bolder;
   text-shadow: 2px 2px 2px #000000;
   background-color: rgb(18, 164, 223);
+
+  justify-content: center;
+}
+
+.button {
   width: 50%;
   line-height: 50px;
-  justify-content: center;
 }
 
 img {
