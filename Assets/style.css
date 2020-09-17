@@ -50,6 +50,11 @@ p {
   background-color: rgb(18, 164, 223);
 }
 
+.btn-length {
+  width: 50%;
+  margin: auto;
+}
+
 button.btn:hover {
   background-color: rgb(241, 176, 212);
   text-shadow: 2px 2px 2px #000000;
