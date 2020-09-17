@@ -48,11 +48,9 @@ p {
   font-weight: bolder;
   text-shadow: 2px 2px 2px #000000;
   background-color: rgb(18, 164, 223);
-}
-
-.btn-length {
   width: 50%;
-  margin: auto;
+  line-height: 50px;
+  justify-content: center;
 }
 
 button.btn:hover {
