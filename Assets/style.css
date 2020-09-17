@@ -53,6 +53,14 @@ p {
   justify-content: center;
 }
 
+img {
+  width: 16%;
+  height: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 10px;
+}
+
 button.btn:hover {
   background-color: rgb(241, 176, 212);
   text-shadow: 2px 2px 2px #000000;
