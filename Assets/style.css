@@ -4,11 +4,12 @@ body {
   flex-direction: column;
   background-image: url(./images/concert-background-image.jpg);
   background-size: cover;
+  font-family: "Raleway", sans-serif;
 }
 
 main {
-    flex: 1 0 auto;
-  }
+  flex: 1 0 auto;
+}
 
 h1 {
   text-align: center;
@@ -24,23 +25,47 @@ p {
   text-shadow: 2px 2px 4px #000000;
   font-weight: 600;
 }
-
-button {
-  margin: auto;
-  display: flex;
-  font-family: "Raleway", sans-serif;
+.bounce {
+  animation: bounce;
+  animation-duration: 1s;
 }
+
 .container {
   align-items: center;
   display: flex;
   height: 50em;
 }
 
-body {
-  font-family: "Raleway", sans-serif;
+.footer-bg {
+  background-color: lightgray;
+  opacity: 0.3;
 }
 
-.footer-bg {
-    background-color: lightgray;
-    opacity: 0.3;
+.btn {
+  margin: auto;
+  display: flex;
+  font-family: "Raleway", sans-serif;
+  font-weight: bolder;
+  text-shadow: 2px 2px 2px #000000;
+  background-color: rgb(18, 164, 223);
+}
+
+button.btn:hover {
+  background-color: rgb(241, 176, 212);
+  text-shadow: 2px 2px 2px #000000;
+}
+
+button.btn:focus {
+  text-shadow: 2px 2px 2px #000000;
+  background-color: rgb(5, 29, 87);
+}
+
+i {
+  margin-right: 10px;
+}
+
+i,
+span {
+  animation: flash;
+  animation-duration: 5s;
 }
