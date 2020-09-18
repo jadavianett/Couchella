@@ -183,17 +183,20 @@ $(document).ready(function () {
     },
   ];
 
+  var buttonImg = ["rap-img","hiphop-img","pop-img","kpop-img","rock-img","indie-img","country-img","electro-img",]
+  var buttonText = ["rap-text","hiphop-text","pop-text","kpop-text","rock-text","indie-text","country-text","electro-text",]
+
    // Points to the artists and their concert video
-  var genreHipHop = musicChoice[0].artists;
-  var genreRap = musicChoice[1].artists;
-  var genrePop = musicChoice[2].artists;
-  var genreKPop = musicChoice[3].artists;
-  var genreRock = musicChoice[4].artists;
-  var genreIndieAlt = musicChoice[5].artists;
-  var genreCountry = musicChoice[6].artists;
-  var genreElectronic = musicChoice[7].artists;
+  var genreHipHop = musicChoice[0];
+  var genreRap = musicChoice[1];
+  var genrePop = musicChoice[2];
+  var genreKPop = musicChoice[3];
+  var genreRock = musicChoice[4];
+  var genreIndieAlt = musicChoice[5];
+  var genreCountry = musicChoice[6];
+  var genreElectronic = musicChoice[7];
 
-
+//================= Function To Be Called On ===================
   function init() {
     mainLayout.empty();
 
@@ -206,7 +209,7 @@ $(document).ready(function () {
     h1El.text("COUCHELLA");
     pTag.addClass("bounce");
     pTag.text("We bring the show to you.&trade;");
-    btnEl.attr("id", "button");
+    btnEl.attr("id", "start-button");
     btnEl.addClass("waves-effect waves-light btn btn-large");
     iTag.addClass("fas fa-ticket-alt flash");
     spanEl.addClass("flash");
@@ -216,7 +219,34 @@ $(document).ready(function () {
     btnEl.append(iTag, spanEl);
   }
 
+  function showGenrePage() {
+    mainLayout.empty();
+
+    var h1El = $("<h1>");
+    h1El.text("PICK A GENRE");
+    
+    mainLayout.append(h1El);
+    for (i = 0; i < musicChoice.length; i++) {
+      var genreBtn = $("<button>");
+      var divEl = $("<div>");
+      var brEl = $("<br>");
+
+      genreBtn.addClass("waves-effect waves-light btn btn-large button " + buttonImg[i]);
+      divEl.addClass(buttonText[i]);
+      divEl.text(musicChoice[i].genre);
+
+      mainLayout.append(genreBtn, brEl);
+      genreBtn.append(divEl);
+    }
+  }
+
+
+//============= Functions being called =================
   init();
+
+
+//================= Event listeners ===========================
+  $(document).on("click", "#start-button", showGenrePage);
 
   // var corsAnywhere = "https://cors-anywhere.herokuapp.com/"
   // $.ajax({
