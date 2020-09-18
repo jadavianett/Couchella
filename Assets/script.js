@@ -331,6 +331,7 @@ $(document).ready(function () {
   //   // console.log(response.similar.results);
   //   // console.log(response.similar.results[2]);
   // });
+  
   var ytplayer = document.querySelector("#ytplayer");
     ytplayer.src = "https://www.youtube.com/embed/" + genreHipHop.artists[3].videoID
     console.log(ytplayer.src)
