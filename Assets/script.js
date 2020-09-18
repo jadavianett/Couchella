@@ -254,10 +254,10 @@ $(document).ready(function () {
   }
 
   //============= Functions being called =================
-  init();
+  // init();
 
   //================= Event listeners ===========================
-  $(document).on("click", "#start-button", showGenrePage);
+  // $(document).on("click", "#start-button", showGenrePage);
 
   // var corsAnywhere = "https://cors-anywhere.herokuapp.com/"
   // $.ajax({
