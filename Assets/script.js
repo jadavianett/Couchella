@@ -14,26 +14,32 @@ $(document).ready(function () {
         {
           name: "Anderson.Paak",
           concertLink: "https://www.youtube.com/watch?v=rtDzrp0xZH4",
+          videoID:"rtDzrp0xZH4", 
         },
         {
           name: "Rihanna",
           concertLink: "https://www.youtube.com/watch?v=7SYmmL1uFYE",
+          videoID: "7SYmmL1uFYE", 
         },
         {
           name: "Cardi B",
           concertLink: "https://www.youtube.com/watch?v=QeIc7WdEG-8",
+          videoID: "QeIc7WdEG-8",
         },
         {
           name: "Miguel",
           concertLink: "https://www.youtube.com/watch?v=J1RUMgdAY7E",
+          videoID: "J1RUMgdAY7E", 
         },
         {
           name: "SZA",
           concertLink: "https://www.youtube.com/watch?v=28E9vyHZNzo",
+          videoID: "28E9vyHZNzo", 
         },
-        {
+      {
           name: "Beyonce",
           concertLink: "https://www.youtube.com/watch?v=ZfZKqA3pMV0",
+          videoID: "ZfZKqA3pMV0",
         },
       ],
     },
@@ -43,18 +49,22 @@ $(document).ready(function () {
         {
           name: "Childish Gambino",
           concertLink: "https://www.youtube.com/watch?v=BGGM_fdF3yA",
+          videoID: "BGGM_fdF3yA",
         },
         {
           name: "Post Malone",
           concertLink: "https://www.youtube.com/watch?v=LRxYHsEJKgI",
+          videoID: "LRxYHsEJKgI",
         },
         {
           name: "Travis Scott",
           concertLink: "https://www.youtube.com/watch?v=-mC3KQse1eY",
+          videoID: "-mC3KQse1eY",
         },
         {
           name: "Black Thought",
           concertLink: "https://www.youtube.com/watch?v=u12r_JI8mGM",
+          videoID: "u12r_JI8mGM",
         },
       ],
     },
@@ -64,30 +74,37 @@ $(document).ready(function () {
         {
           name: "Halsey",
           concertLink: "https://www.youtube.com/watch?v=IcKlMH1LtRk",
+          videoID: "IcKlMH1LtRk",
         },
         {
           name: "Billie Eilish",
           concertLink: "https://www.youtube.com/watch?v=THOpHvbuG-4",
+          videoID: "THOpHvbuG-4",
         },
         {
           name: "Khalid",
           concertLink: "https://www.youtube.com/watch?v=7NoFt6MP-s8",
+          videoID: "7NoFt6MP-s8",
         },
         {
           name: "Panic! at the Disco",
           concertLink: "https://www.youtube.com/watch?v=e3MRf6BZ0LM",
+          videoID: "e3MRf6BZ0LM",
         },
         {
           name: "The Weeknd",
           concertLink: "https://www.youtube.com/watch?v=VXZd_-DQ0Js",
+          videoID: "VXZd_-DQ0Js",
         },
         {
           name: "Miley Cyrus",
           concertLink: "https://www.youtube.com/watch?v=gX4xV6LpKcY",
+          videoID: "gX4xV6LpKcY",
         },
         {
           name: "Ellie Goulding",
           concertLink: "https://www.youtube.com/watch?v=wEiintCfM2I",
+          videoID: "wEiintCfM2I",
         },
       ],
     },
@@ -97,18 +114,22 @@ $(document).ready(function () {
         {
           name: "NCT 127",
           concertLink: "https://www.youtube.com/watch?v=xgDdmABGZj0",
+          videoID: "xgDdmABGZj0",
         },
         {
           name: "BlackPink",
           concertLink: "https://www.youtube.com/watch?v=Xq71SW_8Eh4",
+          videoID: "Xq71SW_8Eh4",
         },
         {
           name: "BTS",
           concertLink: "https://www.youtube.com/watch?v=9n-K9jFiiKg",
+          videoId: "9n-K9jFiiKg",
         },
         {
           name: "Red Velvet",
           concertLink: "https://www.youtube.com/watch?v=0zfHp5xCVj8",
+          videoID: "0zfHp5xCVj8",
         },
       ],
     },
@@ -118,18 +139,22 @@ $(document).ready(function () {
         {
           name: "Phish",
           concertLink: "https://www.youtube.com/watch?v=1kcoOF7_mfU",
+          videoID: "1kcoOF7_mfU",
         },
         {
           name: "Bruce Springsteen",
           concertLink: "https://www.youtube.com/watch?v=VtcvOClpBKo",
+          videoID: "VtcvOClpBKo",
         },
         {
           name: "Arctic Monkeys",
           concertLink: "https://www.youtube.com/watch?v=ppqP39p6VmI",
+          videoID: "ppqP39p6VmI",
         },
         {
           name: "Red Hot Chili Peppers",
           concertLink: "https://www.youtube.com/watch?v=c_Hjvw0PUa8",
+          videoID: "c_Hjvw0PUa8",
         },
       ],
     },
@@ -139,14 +164,17 @@ $(document).ready(function () {
         {
           name: "Tame Impala",
           concertLink: "https://www.youtube.com/watch?v=IXu9jd6SpO0",
+          videoID: "IXu9jd6SpO0",
         },
         {
           name: "Mac Demarco",
           concertLink: "https://www.youtube.com/watch?v=1-HWXiSRD9c",
+          videoID: "1-HWXiSRD9c",
         },
         {
           name: "Boy Pablo",
           concertLink: "https://www.youtube.com/watch?v=Iq_VN8l5NAQ",
+          videoID: "Iq_VN8l5NAQ",
         },
       ],
     },
@@ -156,6 +184,7 @@ $(document).ready(function () {
         {
           name: "Eric Church",
           concertLink: "https://www.youtube.com/watch?v=UGwjGAGMGFc",
+          videoID: "UGwjGAGMGFc",
         },
       ],
     },
@@ -165,14 +194,17 @@ $(document).ready(function () {
         {
           name: "Louis the Child",
           concertLink: "https://www.youtube.com/watch?v=2q1MXnc5ccg",
+          videoID: "2q1MXnc5ccg",
         },
         {
           name: "Dillon Francis",
           concertLink: "https://www.youtube.com/watch?v=OcBr6uQYuQY",
+          videoID: "OcBr6uQYuQY",
         },
         {
           name: "Marshmellow",
           concertLink: "https://www.youtube.com/watch?v=5yBSJ2Z6pjY",
+          videoID: "5yBSJ2Z6pjY",
         },
       ],
     },
@@ -300,5 +332,6 @@ $(document).ready(function () {
   //   // console.log(response.similar.results[2]);
   // });
   var ytplayer = document.querySelector("#ytplayer");
-    ytplayer.src = "https://www.youtube.com/embed?listType=search&list=Beyonce"
+    ytplayer.src = "https://www.youtube.com/embed/" + genreHipHop.artists[3].videoID
+    console.log(ytplayer.src)
 });
