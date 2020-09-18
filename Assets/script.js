@@ -1,15 +1,12 @@
 // console.log("Hello World");
 
 $(document).ready(function () {
-  // Points to the artists and their concert video
-  var genreHipHop = musicChoice[0].artists;
-  var genreRap = musicChoice[1].artists;
-  var genrePop = musicChoice[2].artists;
-  var genreKPop = musicChoice[3].artists;
-  var genreRock = musicChoice[4].artists;
-  var genreIndieAlt = musicChoice[5].artists;
-  var genreCountry = musicChoice[6].artists;
-  var genreElectronic = musicChoice[7].artists;
+
+  var mainLayout = $("#main-layout");
+
+
+ 
+  
 
   //  List of everything nested as such
   //  musicChoice[i] = Object {genre, artist[j]}
@@ -186,6 +183,41 @@ $(document).ready(function () {
     },
   ];
 
+   // Points to the artists and their concert video
+  var genreHipHop = musicChoice[0].artists;
+  var genreRap = musicChoice[1].artists;
+  var genrePop = musicChoice[2].artists;
+  var genreKPop = musicChoice[3].artists;
+  var genreRock = musicChoice[4].artists;
+  var genreIndieAlt = musicChoice[5].artists;
+  var genreCountry = musicChoice[6].artists;
+  var genreElectronic = musicChoice[7].artists;
+
+
+  function init() {
+    mainLayout.empty();
+
+    var h1El = $("<h1>");
+    var pTag = $("<p>");
+    var btnEl = $("<button>");
+    var iTag = $("<i>");
+    var spanEl = $("<span>");
+
+    h1El.text("COUCHELLA");
+    pTag.addClass("bounce");
+    pTag.text("We bring the show to you.&trade;");
+    btnEl.attr("id", "button");
+    btnEl.addClass("waves-effect waves-light btn btn-large");
+    iTag.addClass("fas fa-ticket-alt flash");
+    spanEl.addClass("flash");
+    spanEl.text(" GRAB YOUR TICKET");
+
+    mainLayout.append(h1El, pTag, btnEl);
+    btnEl.append(iTag, spanEl);
+  }
+
+  init();
+
   // var corsAnywhere = "https://cors-anywhere.herokuapp.com/"
   // $.ajax({
   //     url: corsAnywhere + "https://tastedive.com/api/similar?q=red+hot+chili+peppers%2C+pulp+fiction",
@@ -214,16 +246,16 @@ $(document).ready(function () {
   // $("#CityName").text(cityName);
   // var artistName =
 
-  var corsAnywhere = "https://cors-anywhere.herokuapp.com/";
-  $.ajax({
-    url: corsAnywhere + "https://tastedive.com/api/similar?q=childish+gambino",
-    method: "GET",
-  }).then(function (response) {
-    for (i = 0; i <= 5; i++) {
-      console.log(response);
-      console.log(response.Similar.Results[i].Name);
-    }
-    // console.log(response.similar.results);
-    // console.log(response.similar.results[2]);
-  });
+  // var corsAnywhere = "https://cors-anywhere.herokuapp.com/";
+  // $.ajax({
+  //   url: corsAnywhere + "https://tastedive.com/api/similar?q=childish+gambino",
+  //   method: "GET",
+  // }).then(function (response) {
+  //   for (i = 0; i <= 5; i++) {
+  //     console.log(response);
+  //     console.log(response.Similar.Results[i].Name);
+  //   }
+  //   // console.log(response.similar.results);
+  //   // console.log(response.similar.results[2]);
+  // });
 });
