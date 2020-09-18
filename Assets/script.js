@@ -301,20 +301,21 @@ $(document).ready(function () {
   // })
 
   // $("#CityName").text(cityName);
-  // var artistName =
+  var artistName = "Beyonce";
+  // $("button").val();
 
-  // var corsAnywhere = "https://cors-anywhere.herokuapp.com/"
+  var corsAnywhere = "https://cors-anywhere.herokuapp.com/"
 
-  // $.ajax({
-  //     url: corsAnywhere + "https://tastedive.com/api/similar?q=" + artistName,
-  //     method: "GET"
-  //   }).then(function(response) {
-  //     console.log(response);
-  //     console.log(response.Similar.Results[0].Name);
-  //     // console.log(response.similar.results);
-  //     // console.log(response.similar.results[2]);
-  //   });
-  // })
+  $.ajax({
+      url: corsAnywhere + "https://tastedive.com/api/similar?q=" + artistName,
+      method: "GET"
+    }).then(function(response) {
+      console.log(response);
+      console.log(response.Similar.Results[0].Name);
+      // console.log(response.similar.results);
+      // console.log(response.similar.results[2]);
+    });
+
 
   // $("#CityName").text(cityName);
   // var artistName =
