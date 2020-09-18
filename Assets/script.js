@@ -14,12 +14,12 @@ $(document).ready(function () {
         {
           name: "Anderson.Paak",
           concertLink: "https://www.youtube.com/watch?v=rtDzrp0xZH4",
-          videoID:"rtDzrp0xZH4", 
+          videoID: "rtDzrp0xZH4",
         },
         {
           name: "Rihanna",
           concertLink: "https://www.youtube.com/watch?v=7SYmmL1uFYE",
-          videoID: "7SYmmL1uFYE", 
+          videoID: "7SYmmL1uFYE",
         },
         {
           name: "Cardi B",
@@ -29,14 +29,14 @@ $(document).ready(function () {
         {
           name: "Miguel",
           concertLink: "https://www.youtube.com/watch?v=J1RUMgdAY7E",
-          videoID: "J1RUMgdAY7E", 
+          videoID: "J1RUMgdAY7E",
         },
         {
           name: "SZA",
           concertLink: "https://www.youtube.com/watch?v=28E9vyHZNzo",
-          videoID: "28E9vyHZNzo", 
+          videoID: "28E9vyHZNzo",
         },
-      {
+        {
           name: "Beyonce",
           concertLink: "https://www.youtube.com/watch?v=ZfZKqA3pMV0",
           videoID: "ZfZKqA3pMV0",
@@ -232,14 +232,25 @@ $(document).ready(function () {
   ];
 
   // Points to the artists and their concert video
-  var genreHipHop = musicChoice[0];
-  var genreRap = musicChoice[1];
-  var genrePop = musicChoice[2];
-  var genreKPop = musicChoice[3];
-  var genreRock = musicChoice[4];
-  var genreIndieAlt = musicChoice[5];
-  var genreCountry = musicChoice[6];
-  var genreElectronic = musicChoice[7];
+  var genreHipHop = musicChoice[0].artists;
+  var genreRap = musicChoice[1].artists;
+  var genrePop = musicChoice[2].artists;
+  var genreKPop = musicChoice[3].artists;
+  var genreRock = musicChoice[4].artists;
+  var genreIndieAlt = musicChoice[5].artists;
+  var genreCountry = musicChoice[6].artists;
+  var genreElectronic = musicChoice[7].artists;
+
+  var whichGenre = [
+    genreHipHop,
+    genreRap,
+    genrePop,
+    genreKPop,
+    genreRock,
+    genreIndieAlt,
+    genreCountry,
+    genreElectronic,
+  ];
 
   //================= Function To Be Called On ===================
   function init() {
@@ -264,8 +275,10 @@ $(document).ready(function () {
     btnEl.append(iTag, spanEl);
   }
 
-  function showGenrePage() {
+  function showGenrePage(event) {
+    event.stopPropagation();
     mainLayout.empty();
+    
 
     var h1El = $("<h1>");
     h1El.text("pick a genre");
@@ -276,7 +289,10 @@ $(document).ready(function () {
       var divEl = $("<div>");
       var brEl = $("<br>");
 
-      genreBtn.addClass("waves-effect waves-light btn btn-large button " + buttonImg[i]);
+      genreBtn.addClass(
+        "waves-effect waves-light btn btn-large button " + buttonImg[i]
+      );
+      genreBtn.attr("id", i);
       divEl.addClass("btn-text");
       divEl.text(musicChoice[i].genre);
 
@@ -285,37 +301,57 @@ $(document).ready(function () {
     }
   }
 
-  //============= Functions being called =================
-  // init();
 
-  //================= Event listeners ===========================
-  // $(document).on("click", "#start-button", showGenrePage);
+  // Need get user choice of genre and then display artist
+  function showArtists(event) {
+    // event.stopPropagation();
+    // mainLayout.empty();
+    
 
-  // var corsAnywhere = "https://cors-anywhere.herokuapp.com/"
-  // $.ajax({
-  //     url: corsAnywhere + "https://tastedive.com/api/similar?q=red+hot+chili+peppers%2C+pulp+fiction",
-  //     method: "GET"
-  //   }).then(function(response) {
-  //     console.log(response);
-  //   });
-  // })
+    var btnId = $(this).attr("id");
+    console.log(btnId);
 
-  // $("#CityName").text(cityName);
-  var artistName = "Beyonce";
-  // $("button").val();
 
-  var corsAnywhere = "https://cors-anywhere.herokuapp.com/"
 
-  $.ajax({
+    // var h1El = $("<h1>");
+    // h1El.text("pick a genre");
+
+    // mainLayout.append(h1El);
+
+    // var artistBtn = $("<button>");
+    // var divEl = $("<div>");
+    // var brEl = $("<br>");
+  }
+
+  // filter then match filter with artist name, then whatever array[i]
+  // target array[i].videoID
+
+  function displayConcert() {
+    var ytplayer = document.querySelector("#ytplayer");
+    ytplayer.src =
+      "https://www.youtube.com/embed/" + genreHipHop.artists[3].videoID;
+    console.log(ytplayer.src);
+
+    var artistName = "Beyonce";
+    $("button").val();
+
+    var corsAnywhere = "https://cors-anywhere.herokuapp.com/";
+
+    $.ajax({
       url: corsAnywhere + "https://tastedive.com/api/similar?q=" + artistName,
-      method: "GET"
-    }).then(function(response) {
+      method: "GET",
+    }).then(function (response) {
       console.log(response);
       console.log(response.Similar.Results[0].Name);
-      // console.log(response.similar.results);
-      // console.log(response.similar.results[2]);
     });
+  }
 
+  //============= Functions being called =================
+  init();
+
+  //================= Event listeners ===========================
+  $(document).on("click", "#start-button", showGenrePage);
+  $(document).on("click", ".button", showArtists);
 
   // $("#CityName").text(cityName);
   // var artistName =
@@ -332,7 +368,4 @@ $(document).ready(function () {
   //   // console.log(response.similar.results);
   //   // console.log(response.similar.results[2]);
   // });
-  var ytplayer = document.querySelector("#ytplayer");
-    ytplayer.src = "https://www.youtube.com/embed/" + genreHipHop.artists[3].videoID
-    console.log(ytplayer.src)
 });
