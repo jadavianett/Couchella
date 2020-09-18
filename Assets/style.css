@@ -127,12 +127,28 @@ button.electro-img:hover {
   background-position: center;
 }
 
+button.hiphop-img:hover {
+  background-image: url(./images/boombox.png);
+  background-size: 20% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+button.country-img:hover {
+  background-image: url(./images/cowboy.png);
+  background-size: 20% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .rap-text:hover,
 .pop-text:hover,
 .kpop-text:hover,
 .rock-text:hover,
 .indie-text:hover,
-.electro-text:hover {
+.electro-text:hover,
+.hiphop-text:hover,
+.country-text:hover {
   display: none;
 }
 
