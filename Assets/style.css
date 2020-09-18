@@ -4,6 +4,9 @@ body {
   flex-direction: column;
   background-image: url(./images/concert-background-image.jpg);
   background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   font-family: "Raleway", sans-serif;
 }
 
@@ -33,7 +36,7 @@ p {
 .container {
   align-items: center;
   display: flex;
-  height: 50em;
+  justify-content: center;
 }
 
 .footer-bg {
