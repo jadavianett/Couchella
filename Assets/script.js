@@ -223,7 +223,7 @@ $(document).ready(function () {
     mainLayout.empty();
 
     var h1El = $("<h1>");
-    h1El.text("PICK A GENRE");
+    h1El.text("pick a genre");
     
     mainLayout.append(h1El);
     for (i = 0; i < musicChoice.length; i++) {
