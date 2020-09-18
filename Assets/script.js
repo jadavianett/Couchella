@@ -264,7 +264,7 @@ $(document).ready(function () {
 
     h1El.text("COUCHELLA");
     pTag.addClass("bounce");
-    pTag.text("We bring the show to you.&trade;");
+    pTag.text("We bring the show to you.™");
     btnEl.attr("id", "start-button");
     btnEl.addClass("waves-effect waves-light btn btn-large");
     iTag.addClass("fas fa-ticket-alt flash");
@@ -281,7 +281,7 @@ $(document).ready(function () {
     
 
     var h1El = $("<h1>");
-    h1El.text("pick a genre");
+    h1El.text("PICK A GENRE");
 
     mainLayout.append(h1El);
     for (i = 0; i < musicChoice.length; i++) {
