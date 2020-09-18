@@ -14,7 +14,7 @@ $(document).ready(function () {
   //  List of everything nested as such
   //  musicChoice[i] = Object {genre, artist[j]}
   // artist[j] = Object {name, concert link}
-  
+
   var musicChoice = [
     {
       genre: "Hip Hop/R&B",
@@ -103,12 +103,20 @@ $(document).ready(function () {
       genre: "K-Pop",
       artists: [
         {
+          name: "NCT 127",
+          concertLink: "https://www.youtube.com/watch?v=xgDdmABGZj0",
+        },
+        {
           name: "BlackPink",
           concertLink: "https://www.youtube.com/watch?v=Xq71SW_8Eh4",
         },
         {
           name: "BTS",
           concertLink: "https://www.youtube.com/watch?v=9n-K9jFiiKg",
+        },
+        {
+          name: "Red Velvet",
+          concertLink: "https://www.youtube.com/watch?v=0zfHp5xCVj8",
         },
       ],
     },

@@ -47,10 +47,29 @@ p {
   font-family: "Raleway", sans-serif;
   font-weight: bolder;
   text-shadow: 2px 2px 2px #000000;
-  background-color: rgb(18, 164, 223);
+  background-color: rgb(18, 204, 223);
+
+  justify-content: center;
+}
+
+.button {
   width: 50%;
   line-height: 50px;
-  justify-content: center;
+}
+
+h6 {
+  margin: auto;
+  font-family: "Raleway", sans-serif;
+  font-weight: bolder;
+  text-shadow: 2px 2px 2px #000000;
+}
+
+img {
+  width: 20%;
+  height: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 10px;
 }
 
 button.btn:hover {
@@ -61,6 +80,57 @@ button.btn:hover {
 button.btn:focus {
   text-shadow: 2px 2px 2px #000000;
   background-color: rgb(5, 29, 87);
+}
+
+button.rap-img:hover {
+  background-image: url(./images/rap.png);
+  background-size: 20% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+button.pop-img:hover {
+  background-image: url(./images/microphone.png);
+  background-size: 20% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+button.kpop-img:hover {
+  background-image: url(./images/south-korea.png);
+  background-size: 20% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+button.rock-img:hover {
+  background-image: url(./images/maloik.png);
+  background-size: 20% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+button.indie-img:hover {
+  background-image: url(./images/guitar.png);
+  background-size: 20% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+button.electro-img:hover {
+  background-image: url(./images/headphones.png);
+  background-size: 20% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.rap-text:hover,
+.pop-text:hover,
+.kpop-text:hover,
+.rock-text:hover,
+.indie-text:hover,
+.electro-text:hover {
+  display: none;
 }
 
 i {
