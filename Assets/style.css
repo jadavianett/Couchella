@@ -141,6 +141,13 @@ button.country-img:hover {
   background-position: center;
 }
 
+button.music-img:hover {
+  background-image: url(./images/musical-notes.png);
+  background-size: 20% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .rap-text:hover,
 .pop-text:hover,
 .kpop-text:hover,
@@ -148,7 +155,13 @@ button.country-img:hover {
 .indie-text:hover,
 .electro-text:hover,
 .hiphop-text:hover,
-.country-text:hover {
+.country-text:hover,
+.rihanna-text:hover,
+.sza-text:hover,
+.miguel-text:hover,
+.beyonce-text:hover,
+.anderson-text:hover,
+.cardi-text:hover {
   display: none;
 }
 
