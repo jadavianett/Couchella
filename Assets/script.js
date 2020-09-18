@@ -244,10 +244,8 @@ $(document).ready(function () {
       var divEl = $("<div>");
       var brEl = $("<br>");
 
-      genreBtn.addClass(
-        "waves-effect waves-light btn btn-large button " + buttonImg[i]
-      );
-      divEl.addClass(buttonText[i]);
+      genreBtn.addClass("waves-effect waves-light btn btn-large button " + buttonImg[i]);
+      divEl.addClass("btn-text");
       divEl.text(musicChoice[i].genre);
 
       mainLayout.append(genreBtn, brEl);
