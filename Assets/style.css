@@ -141,6 +141,12 @@ button.country-img:hover {
   background-position: center;
 }
 
+button.music-img:hover {
+  background-image: url(./images/musical-notes.png);
+  background-size: 20% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 .btn-text:hover {
   display: none;
