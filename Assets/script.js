@@ -278,7 +278,6 @@ $(document).ready(function () {
   function showGenrePage(event) {
     event.stopPropagation();
     mainLayout.empty();
-    
 
     var h1El = $("<h1>");
     h1El.text("PICK A GENRE");
@@ -301,26 +300,38 @@ $(document).ready(function () {
     }
   }
 
-
   // Need get user choice of genre and then display artist
   function showArtists(event) {
-    // event.stopPropagation();
-    // mainLayout.empty();
-    
+    event.stopPropagation();
+    mainLayout.empty();
 
     var btnId = $(this).attr("id");
-    console.log(btnId);
 
+//===== Just testing the pointer =============
+    // console.log(btnId);
+    // console.log(whichGenre[btnId]);
+    // console.log(whichGenre[btnId][1].name);
+    // console.log(genreCountry[0].name);
+//============================================
 
+    var h1El = $("<h1>");
+    h1El.text("PICK AN ARTIST");
 
-    // var h1El = $("<h1>");
-    // h1El.text("pick a genre");
+    mainLayout.append(h1El);
+    for (i = 0; i < whichGenre[btnId].length; i++) {
+      var artistBtn = $("<button>");
+      var divEl = $("<div>");
+      var brEl = $("<br>");
 
-    // mainLayout.append(h1El);
+      artistBtn.addClass(
+        "waves-effect waves-light btn btn-large button music-img"
+      );
+      divEl.addClass("btn-text");
+      divEl.text(whichGenre[btnId][i].name);
 
-    // var artistBtn = $("<button>");
-    // var divEl = $("<div>");
-    // var brEl = $("<br>");
+      mainLayout.append(artistBtn, brEl);
+      artistBtn.append(divEl);
+    }
   }
 
   // filter then match filter with artist name, then whatever array[i]
