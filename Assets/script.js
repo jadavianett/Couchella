@@ -1,12 +1,7 @@
 // console.log("Hello World");
 
 $(document).ready(function () {
-
   var mainLayout = $("#main-layout");
-
-
- 
-  
 
   //  List of everything nested as such
   //  musicChoice[i] = Object {genre, artist[j]}
@@ -183,10 +178,28 @@ $(document).ready(function () {
     },
   ];
 
-  var buttonImg = ["rap-img","hiphop-img","pop-img","kpop-img","rock-img","indie-img","country-img","electro-img",]
-  var buttonText = ["rap-text","hiphop-text","pop-text","kpop-text","rock-text","indie-text","country-text","electro-text",]
+  var buttonImg = [
+    "hiphop-img",
+    "rap-img",
+    "pop-img",
+    "kpop-img",
+    "rock-img",
+    "indie-img",
+    "country-img",
+    "electro-img",
+  ];
+  var buttonText = [
+    "rap-text",
+    "hiphop-text",
+    "pop-text",
+    "kpop-text",
+    "rock-text",
+    "indie-text",
+    "country-text",
+    "electro-text",
+  ];
 
-   // Points to the artists and their concert video
+  // Points to the artists and their concert video
   var genreHipHop = musicChoice[0];
   var genreRap = musicChoice[1];
   var genrePop = musicChoice[2];
@@ -196,7 +209,7 @@ $(document).ready(function () {
   var genreCountry = musicChoice[6];
   var genreElectronic = musicChoice[7];
 
-//================= Function To Be Called On ===================
+  //================= Function To Be Called On ===================
   function init() {
     mainLayout.empty();
 
@@ -224,14 +237,16 @@ $(document).ready(function () {
 
     var h1El = $("<h1>");
     h1El.text("pick a genre");
-    
+
     mainLayout.append(h1El);
     for (i = 0; i < musicChoice.length; i++) {
       var genreBtn = $("<button>");
       var divEl = $("<div>");
       var brEl = $("<br>");
 
-      genreBtn.addClass("waves-effect waves-light btn btn-large button " + buttonImg[i]);
+      genreBtn.addClass(
+        "waves-effect waves-light btn btn-large button " + buttonImg[i]
+      );
       divEl.addClass(buttonText[i]);
       divEl.text(musicChoice[i].genre);
 
@@ -240,12 +255,10 @@ $(document).ready(function () {
     }
   }
 
-
-//============= Functions being called =================
+  //============= Functions being called =================
   init();
 
-
-//================= Event listeners ===========================
+  //================= Event listeners ===========================
   $(document).on("click", "#start-button", showGenrePage);
 
   // var corsAnywhere = "https://cors-anywhere.herokuapp.com/"
