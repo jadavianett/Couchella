@@ -232,7 +232,7 @@ $(document).ready(function () {
       var brEl = $("<br>");
 
       genreBtn.addClass("waves-effect waves-light btn btn-large button " + buttonImg[i]);
-      divEl.addClass(buttonText[i]);
+      divEl.addClass("btn-text");
       divEl.text(musicChoice[i].genre);
 
       mainLayout.append(genreBtn, brEl);
