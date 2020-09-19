@@ -35,21 +35,21 @@ The URL for this website is https://jadavianett.github.io/project-1/
 
 Step 1:
 <br>
-<img src ="./images.Step1.png" alt= "Couchella Step 1">
+<img src ="./Assets/images/Step1.png" alt= "Couchella Step 1">
 <br>
 Step 2:
 <br>
-<img src ="./images.Step2.png" alt= "Couchella Step 2">
+<img src ="./Assets/images/Step2.png" alt= "Couchella Step 2">
 <br>
 Step 3:
 <br>
-<img src ="./images.Step3.png" alt= "Couchella Step 3">
+<img src ="./Assets/images/Step3.png" alt= "Couchella Step 3">
 <br>
 Step 4:
-<img src ="./images.Step4.png" alt= "Couchella Step 4">
+<img src ="./Assets/images/Step4.png" alt= "Couchella Step 4">
 <br>
 Step 1 Mobile:
-<img src ="./images.Step1Mobile.png" alt= "Couchella Step 1 Responsive View">
+<img src ="./Assets/images/Step1Mobile.png" alt= "Couchella Step 1 Responsive View">
 
 
 ### Credits and Contact
@@ -77,7 +77,7 @@ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
+The below copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
