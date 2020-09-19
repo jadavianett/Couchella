@@ -94,4 +94,4 @@ SOFTWARE.
 
 For other developers who would like to provide feedback on how to improve the work done on this project or offer other suggestions, please feel free to do so via the GitHub repositories provided.
 
-&copy;[2020] [J-Squad:  Jada Arnett, Jazon Ozulumba, Jamie Jones, and Jeff Flynn]
+&copy;[2020] [J-Squad:  Jada Arnett, Jamie Jones, Jason Ozulumba, and Jeff Flynn]
