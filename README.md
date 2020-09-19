@@ -13,13 +13,15 @@ The application goals of this project were as follows:
     6) No use of alerts, confirms, or prompts
     7) App to be deployed to GitHub pages
 
+The app also had to be responsive and would be first viewed by the graders on a mobile device.
+
 ## Description
 
 The idea for this project came somewhat from the 2020 pandemic and the fact that it has made it nearly impossible for concert-goers and music enthusiasts to attend live shows.  However even in the best of times there are many people who have barriers in their way that prevent them from attending as many concerts as they would otherwise like.
 
 With so many concerts being filmed in HD and 4K video these music enthusiasts would enjoy being able to relax on their couch and watch some great concerts from the comfort of home, without having to sit at their desks and putting in the work searching YouTube and choosing which concerts they should watch. Our app has picked the best concerts so that all a user has to do is open the app, pick a genre, and then an artist.  A concert is then recommended and the user just hits play to begin.  Couchella is an app that allows someone who feels like watching a concert to easily do so while knowing that the content has already been vetted as being worthy of viewing.
 
-What makes the project stand out is that it grabs a user's attention right from the start.  A background image was chosen that sets the stage perfectly.  A short, to the point trademarked phrase--"We bring the show to you"--communicates immediately what the app provides to the user.  A clear and obvious call to action starts the process.
+What makes the project stand out is that it grabs a user's attention right from the start.  A background image was chosen to set the stage.  A short, to the point trademarked phrase--"We bring the show to you"--communicates immediately what the app provides to the user.  A clear and obvious call to action button--"Grab Your Ticket" along with a ticket icon--starts the process.
 
 We learned a lot in this project from new CSS tricks to working with new APIs but the main lesson was simply how to put together everything taught to us thus far in the program and learning how to use GitHub as a group.
 
@@ -46,28 +48,25 @@ Step 3:
 Step 4:
 <img src ="./images.Step4.png" alt= "Couchella Step 4">
 <br>
+Step 1 Mobile:
+<img src ="./images.Step1Mobile.png" alt= "Couchella Step 1 Responsive View">
 
+### Credits and Contact
 
-Various 
+J-Squad Collaborators (in alphabetical order by first name):
+Jada Arnett:  https://github.com/jadavianett
+Jamie Jones: https://github.com/jamjon94
+Jason Ozulumba: https://github.com/MBPJason
+Jeff Flynn:  https://github.com/7J647
 
-<img src ="./Atlanta.png" alt= "Weather Dashboard app screen shot Atlanta">
-<img src ="./Honolulu.png" alt= "Weather Dashboard app screen shot Honolulu">
-<img src ="./Las Vegas.png" alt= "Weather Dashboard app screen shot Las Vegas">
-<img src ="./Reykjavik.png" alt= "Weather Dashboard app screen shot Reykjavik">
-
-
-
-Learned--Transparent backgrounds without making text on top transparent.
-
-
-At a minimum, your project README needs a title and a short description explaining the what, why, and how. What was your motivation? Why did you build this project? (Note: The answer is not "Because it was a homework assignment.") What problem does it solve? What did you learn? What makes your project stand out? If your project has a lot of features, consider adding a heading called "Features" and listing them here.
-
-
-
-
-## CREDITS
+When starting a new project, always remember to first Link Your ****
 
 <div>Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+With thanks to instructor Jonathan Watson and his team of TAs.
+
+
+
 
 
 
