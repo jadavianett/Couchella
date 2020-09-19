@@ -220,16 +220,6 @@ $(document).ready(function () {
     "country-img",
     "electro-img",
   ];
-  var buttonText = [
-    "rap-text",
-    "hiphop-text",
-    "pop-text",
-    "kpop-text",
-    "rock-text",
-    "indie-text",
-    "country-text",
-    "electro-text",
-  ];
 
   // Points to the artists and their concert video
   var genreHipHop = musicChoice[0].artists;
@@ -252,8 +242,16 @@ $(document).ready(function () {
     genreElectronic,
   ];
 
+  // Empty variables to use for pointers and later optional stuff
+  var userGenreChoice;
+  var artistChoices;
+  var userArtistChoice;
+  var concertVideoId;
+
   //================= Function To Be Called On ===================
+
   function init() {
+    // Cleans up page for displaying the landing page
     mainLayout.empty();
 
     var h1El = $("<h1>");
@@ -263,7 +261,7 @@ $(document).ready(function () {
     var spanEl = $("<span>");
 
     h1El.text("COUCHELLA");
-    pTag.addClass("bounce");
+    pTag.addClass("animation");
     pTag.text("We bring the show to you.™");
     btnEl.attr("id", "start-button");
     btnEl.addClass("waves-effect waves-light btn btn-large");
@@ -275,7 +273,9 @@ $(document).ready(function () {
     btnEl.append(iTag, spanEl);
   }
 
+  // User picks which Genre of music the would like to see
   function showGenrePage(event) {
+    // Cleans up page for displaying Genres
     event.stopPropagation();
     mainLayout.empty();
 
@@ -283,18 +283,25 @@ $(document).ready(function () {
     h1El.text("PICK A GENRE");
 
     mainLayout.append(h1El);
+    // Loops through musicChoice to get Genres' buttons
     for (i = 0; i < musicChoice.length; i++) {
       var genreBtn = $("<button>");
       var divEl = $("<div>");
       var brEl = $("<br>");
-
+      // I added genre-btn. There wasn't another way having an "empty/no effect" pointer
+      // This way it has it's unique point and will not share a similar pointer as the artist buttons
       genreBtn.addClass(
-        "waves-effect waves-light btn btn-large button " + buttonImg[i]
+        "waves-effect waves-light genre-btn btn btn-large button " +
+          buttonImg[i]
       );
+      // I used "i" to serve a grab point to indicate which genre was chosen
       genreBtn.attr("id", i);
+      // This is the start of a chain to just get the concert pop up to grab the correct genre,
+      // so we can get the correct artist list and then correct artist and videoID.
+      // Sets "button" with the name of the genre
+      genreBtn.attr("name", musicChoice[i].genre);
       divEl.addClass("btn-text");
       divEl.text(musicChoice[i].genre);
-
       mainLayout.append(genreBtn, brEl);
       genreBtn.append(divEl);
     }
@@ -302,27 +309,28 @@ $(document).ready(function () {
 
   // Need get user choice of genre and then display artist
   function showArtists(event) {
+    // Cleans up page for displaying artists
     event.stopPropagation();
     mainLayout.empty();
-
+    // Grabs the name of the button clicked and puts in to the empty variable "userGenreChoice"
+    userGenreChoice = $(this).attr("name");
     var btnId = $(this).attr("id");
 
-//===== Just testing the pointer =============
-    // console.log(btnId);
-    // console.log(whichGenre[btnId]);
-    // console.log(whichGenre[btnId][1].name);
-    // console.log(genreCountry[0].name);
-//============================================
-
+    // Header text append before get artist list buttons
     var h1El = $("<h1>");
     h1El.text("PICK AN ARTIST");
 
     mainLayout.append(h1El);
+    // Renders Artist Buttons using the "id" number as an indicator/pointer into the whichGenre array
     for (i = 0; i < whichGenre[btnId].length; i++) {
       var artistBtn = $("<button>");
       var divEl = $("<div>");
       var brEl = $("<br>");
-
+      // Same idea, use "i" to be an indicator/pointer to an array with the next function call
+      artistBtn.attr("id", i);
+      // Just realized this might not be necessary anymore but it is still a nice indicator/pointer
+      // to keep and it gives a solid checkpoint on the DOM to call to
+      artistBtn.attr("type", userGenreChoice);
       artistBtn.addClass(
         "waves-effect waves-light btn btn-large button music-img"
       );
@@ -334,49 +342,119 @@ $(document).ready(function () {
     }
   }
 
-  // filter then match filter with artist name, then whatever array[i]
-  // target array[i].videoID
+  // This is SUPER IMPORTANT
+  // It checks userGenreChoice for which genre then sets
+  // the empty variable "artistChoices" as the correct array to work with
+  function selectConcert() {
+    if (userGenreChoice == "Hip Hop/R&B") {
+      artistChoices = genreHipHop;
+    } else if (userGenreChoice == "Rap") {
+      artistChoices = genreRap;
+    } else if (userGenreChoice == "Pop") {
+      artistChoices = genrePop;
+    } else if (userGenreChoice == "K-Pop") {
+      artistChoices = genreKPop;
+    } else if (userGenreChoice == "Rock") {
+      artistChoices = genreRock;
+    } else if (userGenreChoice == "Indie/Alternative") {
+      artistChoices = genreIndieAlt;
+    } else if (userGenreChoice == "Country") {
+      artistChoices = genreCountry;
+    } else if (userGenreChoice == "Electronic") {
+      artistChoices = genreElectronic;
+    }
+  }
 
-  function displayConcert() {
-    var ytplayer = document.querySelector("#ytplayer");
-    ytplayer.src =
-      "https://www.youtube.com/embed/" + genreHipHop.artists[3].videoID;
-    console.log(ytplayer.src);
+  function displayConcert(event) {
+    // Cleans up page for displaying the concert
+    event.stopPropagation();
+    mainLayout.empty();
+    // We call the checker here
+    selectConcert();
+    console.log(artistChoices);
+    // We get the indicator or pointer for the array here
+    var btnId = $(this).attr("id");
+    // we use both the checker and pointer to fill in the empty variables values
+    userArtistChoice = artistChoices[btnId].name;
+    concertVideoId = artistChoices[btnId].videoID;
+    console.log(userArtistChoice);
+    console.log(concertVideoId);
 
-    var artistName = "Beyonce";
-    $("button").val();
+    var h1El = $("<h1>");
+    var concertScreen = $("<iframe>");
+
+    // I think we might need another API other than this youtube embed one
+    concertScreen.attr("id", "ytplayer");
+    concertScreen.attr("type", "text/html");
+    concertScreen.attr("width", "640");
+    concertScreen.attr("height", "390");
+    concertScreen.attr(
+      "src",
+      "https://www.youtube.com/embed/" + concertVideoId
+    );
+    concertScreen.attr("frameborder", "0");
+    h1El.text("ENJOY THE SHOW");
+
+    var cardPanel = $("<div>");
+    var h6El = $("<h6>");
+    var spanEl = $("<span>");
+
+    cardPanel.addClass("card-panel color");
+    spanEl.addClass("white-text");
+    h6El.text(
+      "Enjoying the show? Here are some similar artists you might like!"
+    );
+
+    // Builds the first part of the concert page
+    mainLayout.append(h1El, concertScreen, divider, cardPanel);
+    cardPanel.append(spanEl);
+    spanEl.append(h6El);
 
     var corsAnywhere = "https://cors-anywhere.herokuapp.com/";
 
+    // Currently sometimes getting error 429(Too many requests) when the API was called on
+    // Which is weird since I am only calling on it once???
     $.ajax({
-      url: corsAnywhere + "https://tastedive.com/api/similar?q=" + artistName,
+      url:
+        corsAnywhere +
+        "https://tastedive.com/api/similar?q=" +
+        userArtistChoice,
       method: "GET",
     }).then(function (response) {
-      console.log(response);
-      console.log(response.Similar.Results[0].Name);
+      console.log(response.Similar.Results);
+      // Takes response.Similar.Results and starts from index 0 in the array and stops before index 5, 0 =< x < 5;
+      // Then it "slices" that portion out. Then "map" makes a new array from that slice
+      //  I am calling that array that was mapped "artists"
+      // Then I am telling it to return artists or in other words topFiveSimilar = artists[]
+      var topFiveSimilar = response.Similar.Results.slice(0, 5).map(
+        (artists) => {
+          return artists;
+        }
+      );
+
+      // Just another way of doing a for loop using forEach and have a counter on the outside and an incrementor on the inside
+      // Pretty much does the same thing, don't know why I did it like this
+      var i = 0;
+      topFiveSimilar.forEach((musicTalent) => {
+        var pTag = $("<p>");
+
+        pTag.attr("id", i);
+        pTag.addClass("white-text");
+        pTag.text(musicTalent.Name);
+
+        spanEl.append(pTag);
+        i++;
+      });
     });
   }
 
-  //============= Functions being called =================
+  //============= Functions being called =======================
+  // Sets everything up, brings up landing page
   init();
 
   //================= Event listeners ===========================
+  // Listens for click events on the document, with a pointer(class or id) and then executes function
   $(document).on("click", "#start-button", showGenrePage);
-  $(document).on("click", ".button", showArtists);
-
-  // $("#CityName").text(cityName);
-  // var artistName =
-
-  // var corsAnywhere = "https://cors-anywhere.herokuapp.com/";
-  // $.ajax({
-  //   url: corsAnywhere + "https://tastedive.com/api/similar?q=childish+gambino",
-  //   method: "GET",
-  // }).then(function (response) {
-  //   for (i = 0; i <= 5; i++) {
-  //     console.log(response);
-  //     console.log(response.Similar.Results[i].Name);
-  //   }
-  //   // console.log(response.similar.results);
-  //   // console.log(response.similar.results[2]);
-  // });
+  $(document).on("click", ".genre-btn", showArtists);
+  $(document).on("click", ".music-img", displayConcert);
 });
