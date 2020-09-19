@@ -1,6 +1,6 @@
-# project-1
+# project-1: "COUCHELLA"
 
-## Description 
+## Introduction 
 
 As developers we are all part of a community and most projects whether individual or collaborative inside an organization involve working together with or seeking guidance from others to achieve the project goal.  This "project-1" of the Georgia Tech Full Stack Flex Full-Time Coding program is our first opportunity to work together with our peers to achieve a project's requirements within given restraints.
 
@@ -13,28 +13,25 @@ The application goals of this project were as follows:
     6) No use of alerts, confirms, or prompts
     7) App to be deployed to GitHub pages
 
+## Description
+
+The idea for this project came somewhat from the 2020 pandemic and the fact that it has made it nearly impossible for concert-goers and music enthusiasts to attend live shows.  However even in the best of times there are many people who have barriers in their way that prevent them from attending as many concerts as they would otherwise like.
+
+With so many concerts being filmed in HD and 4K video these music enthusiasts would enjoy being able to relax on their couch and watch some great concerts from the comfort of home, without having to sit at their desks and putting in the work searching YouTube and choosing which concerts they should watch. Our app has picked the best concerts so that all a user has to do is open the app, pick a genre, and then an artist.  A concert is then recommended and the user just hits play to begin.  Couchella is an app that allows someone who feels like watching a concert to easily do so while knowing that the content has already been vetted as being worthy of viewing.
+
+What makes the project stand out is that it grabs a user's attention right from the start.  A background image was chosen that sets the stage perfectly.  A short, to the point trademarked phrase--"We bring the show to you"--communicates immediately what the app provides to the user.  A clear and obvious call to action starts the process.
+
+## Features
+
+This website features the use of CSS that appeals to the target demographic which is basically music enthusiasts between the ages of 18-35 roughly.  The colors were purposely chosen grab a user's attention in a positive way that conveys the atmosphere of a major concert.  Buttons were styled with icons, the use of animation, and color changes for different listening events.  One API call brings in a chosen YouTube video and another API call to TasteDive brings in a list of similar artists.  All of this is achieved on just one HTML page.
 
 
 
+Learned--Transparent backgrounds without making text on top transparent.
 
 
-## Application Requirements
+At a minimum, your project README needs a title and a short description explaining the what, why, and how. What was your motivation? Why did you build this project? (Note: The answer is not "Because it was a homework assignment.") What problem does it solve? What did you learn? What makes your project stand out? If your project has a lot of features, consider adding a heading called "Features" and listing them here.
 
-* Must use at least two server-side APIs
-
-* Must use a CSS framework _other than_ Bootstrap
-
-* Must be interactive (i.e: accept and respond to user input)
-
-* Use at least one new third-party API
-
-* Must have a polished UI
-
-* Must meet good quality coding standards
-
-* Does not use alerts, confirms or prompts (look into _modals_)
-
-* Must be deployed to GitHub Pages
 
 
 
