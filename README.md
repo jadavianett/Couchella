@@ -51,6 +51,7 @@ Step 4:
 Step 1 Mobile:
 <img src ="./images.Step1Mobile.png" alt= "Couchella Step 1 Responsive View">
 
+
 ### Credits and Contact
 
 J-Squad Collaborators (in alphabetical order by first name):
@@ -66,8 +67,6 @@ When starting a new project, always remember to first Link Your ****
 With thanks to instructor Jonathan Watson and his team of TAs.
 
 #### License
-
-&copy;[2020] [Jada Arnett, Jazon Ozulumba, Jamie Jones, and Jeff Flynn]
 
 ---
 
@@ -93,4 +92,6 @@ SOFTWARE.
 
 ###### Contributing
 
-For other developers who would like to improve the work done on this project or offer suggestions, please feel free to do so and Slack me with your comments.
+For other developers who would like to provide feedback on how to improve the work done on this project or offer other suggestions, please feel free to do so via the GitHub repositories provided.
+
+&copy;[2020] [Jada Arnett, Jazon Ozulumba, Jamie Jones, and Jeff Flynn]
