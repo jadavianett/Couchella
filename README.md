@@ -27,7 +27,7 @@ We learned a lot in this project from new CSS tricks to working with new APIs bu
 
 ## Features
 
-This website features the use of CSS that appeals to the target demographic which is basically music enthusiasts between the ages of 18-35 roughly.  The colors were purposely chosen grab a user's attention in a positive way that conveys the atmosphere of a major concert.  Buttons were styled with icons, the use of animation and wave effects, and color changes for different listening events.  One API call brings in a chosen YouTube video and another API call to TasteDive brings in a list of similar artists.  All of this is achieved on just one HTML page.
+This website features the use of CSS that appeals to the target demographic which is basically music enthusiasts between the ages of 18-35 roughly.  The colors were purposely chosen grab a user's attention in a positive way that conveys the atmosphere of a major concert.  Buttons were styled with icons, the use of animation and wave effects, and color changes for different listening events.  One API call brings in a chosen YouTube video and another API call to tastedive brings in a list of similar artists.  All of this is achieved on just one HTML page.
 
 ### Usage including URL and screenshots
 
@@ -65,10 +65,32 @@ When starting a new project, always remember to first Link Your ****
 
 With thanks to instructor Jonathan Watson and his team of TAs.
 
+#### License
 
+&copy;[2020] [Jada Arnett, Jazon Ozulumba, Jamie Jones, and Jeff Flynn]
 
+---
 
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+###### Contributing
+
+For other developers who would like to improve the work done on this project or offer suggestions, please feel free to do so and Slack me with your comments.
