@@ -406,7 +406,7 @@ $(document).ready(function () {
     );
 
     // Builds the first part of the concert page
-    mainLayout.append(h1El, concertScreen, divider, cardPanel);
+    mainLayout.append(h1El, concertScreen, cardPanel);
     cardPanel.append(spanEl);
     spanEl.append(h6El);
 
