@@ -31,7 +31,7 @@ This website features the use of CSS that appeals to the target demographic whic
 
 ### Usage including URL and screenshots
 
-The URL for this website is https://jadavianett.github.io/project-1/
+The URL for this website is https://jadavianett.github.io/Couchella/
 
 Step 1:
 <br>
