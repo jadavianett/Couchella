@@ -49,6 +49,7 @@ Step 4:
 <img src ="./Assets/images/Step4.png" alt= "Couchella Step 4">
 <br>
 Step 1 Mobile:
+<br>
 <img src ="./Assets/images/Step1Mobile.png" alt= "Couchella Step 1 Responsive View">
 
 
