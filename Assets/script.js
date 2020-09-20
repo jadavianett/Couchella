@@ -18,8 +18,8 @@ $(document).ready(function () {
         },
         {
           name: "Rihanna",
-          concertLink: "https://www.youtube.com/watch?v=7SYmmL1uFYE",
-          videoID: "7SYmmL1uFYE",
+          concertLink: "https://www.youtube.com/watch?v=DuuiIE9s3FQ",
+          videoID: "DuuiIE9s3FQ",
         },
         {
           name: "Cardi B",
