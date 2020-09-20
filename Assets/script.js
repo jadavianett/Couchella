@@ -247,12 +247,17 @@ $(document).ready(function () {
   var artistChoices;
   var userArtistChoice;
   var concertVideoId;
+  var genreBtnId;
+  var artistBtnId;
 
   //================= Function To Be Called On ===================
 
-  function init() {
+  function init(event) {
     // Cleans up page for displaying the landing page
+
     mainLayout.empty();
+
+    var title = "Welcome";
 
     var h1El = $("<h1>");
     var pTag = $("<p>");
@@ -271,11 +276,15 @@ $(document).ready(function () {
 
     mainLayout.append(h1El, pTag, btnEl);
     btnEl.append(iTag, spanEl);
+
+    history.pushState({ page: "Welcome" }, "Welcome", null);
+    document.title = title;
   }
 
   // User picks which Genre of music the would like to see
   function showGenrePage(event) {
     // Cleans up page for displaying Genres
+    // event.preventDefault();
     event.stopPropagation();
     mainLayout.empty();
 
@@ -305,16 +314,27 @@ $(document).ready(function () {
       mainLayout.append(genreBtn, brEl);
       genreBtn.append(divEl);
     }
+      var title = "Pick a Genre";
+      history.pushState({ page: "Genre", title: title }, title, "/Genres");
+      document.title = title;
   }
 
   // Need get user choice of genre and then display artist
   function showArtists(event) {
     // Cleans up page for displaying artists
+    // event.preventDefault();
     event.stopPropagation();
     mainLayout.empty();
     // Grabs the name of the button clicked and puts in to the empty variable "userGenreChoice"
     userGenreChoice = $(this).attr("name");
-    var btnId = $(this).attr("id");
+    var btnId;
+    if (genreBtnId == undefined || null) {
+      genreBtnId = $(this).attr("id");
+      btnId = genreBtnId;
+    } else {
+      btnId = $(this).attr("id") || genreBtnId;
+    }
+    console.log(genreBtnId);
 
     // Header text append before get artist list buttons
     var h1El = $("<h1>");
@@ -340,6 +360,9 @@ $(document).ready(function () {
       mainLayout.append(artistBtn, brEl);
       artistBtn.append(divEl);
     }
+    var title = userGenreChoice + " Artists";
+    history.pushState({ page: "Artists", title: title }, title, "/Artists");
+    document.title = title;
   }
 
   // This is SUPER IMPORTANT
@@ -367,13 +390,23 @@ $(document).ready(function () {
 
   function displayConcert(event) {
     // Cleans up page for displaying the concert
+    // event.preventDefault();
     event.stopPropagation();
     mainLayout.empty();
     // We call the checker here
     selectConcert();
     console.log(artistChoices);
     // We get the indicator or pointer for the array here
-    var btnId = $(this).attr("id");
+
+    var btnId;
+    if (artistBtnId == undefined || null) {
+      artistBtnId = $(this).attr("id");
+      btnId = artistBtnId;
+    } else {
+      btnId = $(this).attr("id") || artistBtnId;
+    }
+    console.log(artistBtnId);
+
     // we use both the checker and pointer to fill in the empty variables values
     userArtistChoice = artistChoices[btnId].name;
     concertVideoId = artistChoices[btnId].videoID;
@@ -446,8 +479,31 @@ $(document).ready(function () {
         i++;
       });
     });
+    var title = userArtistChoice + " Concert";
+    history.replaceState({ page: "Concert", title: title }, title, "/Concerts");
+    document.title = title;
   }
 
+  // function historyGenres(event) {
+  //   event.stopPropagation();
+  //   var title = "Pick a Genre";
+  //   history.pushState({ page: "Genre", title: title }, title, "/Genres");
+  //   document.title = title;
+  // }
+
+  // function historyArtists(event) {
+  //   event.stopPropagation();
+  //   var title = userGenreChoice + " Artists";
+  //   history.pushState({ page: "Artists", title: title }, title, "/Artists");
+  //   document.title = title;
+  // }
+
+  // function historyConcert(event) {
+  //   event.stopPropagation();
+  //   var title = userArtistChoice + " Concert";
+  //   history.pushState({ page: "Concert", title: title }, title, "/Concerts");
+  //   document.title = title;
+  // }
   //============= Functions being called =======================
   // Sets everything up, brings up landing page
   init();
@@ -455,6 +511,32 @@ $(document).ready(function () {
   //================= Event listeners ===========================
   // Listens for click events on the document, with a pointer(class or id) and then executes function
   $(document).on("click", "#start-button", showGenrePage);
+  // $("button").on("click", "#start-button", historyGenres);
+
   $(document).on("click", ".genre-btn", showArtists);
+  // $("button").on("click", ".genre-btn", historyArtists);
+
   $(document).on("click", ".music-img", displayConcert);
+  // $("button").on("click", ".genre-btn", historyConcert);
+  // Back and forward check
+  $(window).on("popstate", function (event) {
+    var state = event.originalEvent.state.page;
+    console.log(state);
+    console.log("onpopstate is reading");
+    if (state !== null) {
+      if (state == "Welcome") {
+        console.log("reading Welcome go back or go forward");
+        init();
+      } else if (state == "Genre") {
+        console.log("reading Genre go back or go forward");
+        showGenrePage(event);
+      } else if (state == "Artists") {
+        console.log("reading Artists go back or go forward");
+        showArtists(event);
+      } else if (state == "Concert") {
+        console.log("reading Concert go back or go forward");
+        displayConcert(event);
+      }
+    }
+  });
 });

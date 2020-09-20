@@ -35,23 +35,22 @@ The URL for this website is https://jadavianett.github.io/Couchella/
 
 Step 1:
 <br>
-<img src ="./Assets/images/Step1.png" alt= "Couchella Step 1">
+![Couchella Step 1](./assets/images/Step1.png)
 <br>
 Step 2:
 <br>
-<img src ="./Assets/images/Step2.png" alt= "Couchella Step 2">
+![Couchella Step 1](./assets/images/Step2.png)
 <br>
 Step 3:
 <br>
-<img src ="./Assets/images/Step3.png" alt= "Couchella Step 3">
+![Couchella Step 1](./assets/images/Step3.png)
 <br>
 Step 4:
-<img src ="./Assets/images/Step4.png" alt= "Couchella Step 4">
+![Couchella Step 1](./assets/images/Step4.png)
 <br>
 Step 1 Mobile:
 <br>
-<img src ="./Assets/images/Step1Mobile.png" alt= "Couchella Step 1 Responsive View">
-
+![Couchella Step 1 Responsive View](./assets/images/Step1Mobile.png)
 
 ### Credits and Contact
 
