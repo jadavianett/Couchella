@@ -35,6 +35,7 @@ The URL for this website is https://jadavianett.github.io/Couchella/
 
 Step 1:
 <br>
+<<<<<<< HEAD
 ![Couchella Step 1](./assets/images/Step1.png)
 <br>
 Step 2:
@@ -51,6 +52,25 @@ Step 4:
 Step 1 Mobile:
 <br>
 ![Couchella Step 1 Responsive View](./assets/images/Step1Mobile.png)
+=======
+<img src ="./Assets/images/Step1.png" alt= "Couchella Step 1">
+<br>
+Step 2:
+<br>
+<img src ="./Assets/images/Step2.png" alt= "Couchella Step 2">
+<br>
+Step 3:
+<br>
+<img src ="./Assets/images/Step3.png" alt= "Couchella Step 3">
+<br>
+Step 4:
+<img src ="./Assets/images/Step4.png" alt= "Couchella Step 4">
+<br>
+Step 1 Mobile:
+<br>
+<img src ="./Assets/images/Step1Mobile.png" alt= "Couchella Step 1 Responsive View">
+
+>>>>>>> 4d1d6c0a30eb0f4db98cc05c6eebfe52fd17906f
 
 ### Credits and Contact
 
@@ -77,7 +97,7 @@ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
+The below copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
