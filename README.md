@@ -23,11 +23,11 @@ With so many concerts being filmed in HD and 4K video these music enthusiasts wo
 
 What makes the project stand out is that it grabs a user's attention right from the start.  A background image was chosen to set the stage.  A short, to the point trademarked phrase--"We bring the show to you"--communicates immediately what the app provides to the user.  A clear and obvious call to action button--"Grab Your Ticket" along with a ticket icon--starts the process.
 
-We learned a lot in this project from new CSS tricks to working with new APIs but the main lesson was simply how to put together everything taught to us thus far in the program and learning how to use GitHub as a group.
+We learned a lot in this project from new CSS tricks and frameworks to working with new APIs but the main lesson was simply how to put together everything taught to us thus far in the program and learning how to use GitHub as a group.
 
 ## Features
 
-This website features the use of CSS that appeals to the target demographic which is basically music enthusiasts between the ages of 18-35 roughly.  The colors were purposely chosen grab a user's attention in a positive way that conveys the atmosphere of a major concert.  Buttons were styled with icons, the use of animation and wave effects, and color changes for different listening events.  One API call brings in a chosen YouTube video and another API call to tastedive brings in a list of similar artists.  All of this is achieved on just one HTML page.
+This website features the use of CSS that appeals to the target demographic which is basically music enthusiasts between the ages of 18-35.  The colors were purposely chosen to grab a user's attention in a positive way that conveys the lively atmosphere of a major concert.  Buttons were styled with icons, the use of animation and wave effects, and color changes for different listening events.  One API call brings in a chosen YouTube video and another API call to TasteDive brings in a list of similar artists.  All of this is achieved on just one HTML page.
 
 ### Usage including URL and screenshots
 
@@ -39,14 +39,14 @@ Step 1:
 <br>
 Step 2:
 <br>
-![Couchella Step 1](./Assets/images/Step2.png)
+![Couchella Step 2](./Assets/images/Step2.png)
 <br>
 Step 3:
 <br>
-![Couchella Step 1](./Assets/images/Step3.png)
+![Couchella Step 3](./Assets/images/Step3.png)
 <br>
 Step 4:
-![Couchella Step 1](./Assets/images/Step4.png)
+![Couchella Step 4](./Assets/images/Step4.png)
 <br>
 Step 1 Mobile:
 <br>
