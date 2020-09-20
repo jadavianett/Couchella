@@ -31,26 +31,26 @@ This website features the use of CSS that appeals to the target demographic whic
 
 ### Usage including URL and screenshots
 
-The URL for this website is https://jadavianett.github.io/project-1/
+The URL for this website is https://jadavianett.github.io/Couchella/
 
 Step 1:
 <br>
-<img src ="./images.Step1.png" alt= "Couchella Step 1">
+![Couchella Step 1](./assets/images/Step1.png)
 <br>
 Step 2:
 <br>
-<img src ="./images.Step2.png" alt= "Couchella Step 2">
+![Couchella Step 1](./assets/images/Step2.png)
 <br>
 Step 3:
 <br>
-<img src ="./images.Step3.png" alt= "Couchella Step 3">
+![Couchella Step 1](./assets/images/Step3.png)
 <br>
 Step 4:
-<img src ="./images.Step4.png" alt= "Couchella Step 4">
+![Couchella Step 1](./assets/images/Step4.png)
 <br>
 Step 1 Mobile:
-<img src ="./images.Step1Mobile.png" alt= "Couchella Step 1 Responsive View">
-
+<br>
+![Couchella Step 1 Responsive View](./assets/images/Step1Mobile.png)
 
 ### Credits and Contact
 
